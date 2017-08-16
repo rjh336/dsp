@@ -81,7 +81,7 @@ Upload these 3 files to the [`editors`](editors/) folder.
 
 What terminal editor will be your preferred choice of use? How did you make your decision?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> Emacs - although it doesn't open in my terminal window. I chose it because it is less scary looking than vim, more replicates the common shortcuts of a graphical editor, and I do not want to be limited by nano. Also, I am not down with this whole escaping business. Hey, I edited this markdown in emacs!
 
 --
 
@@ -89,6 +89,6 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 What graphical editor will you use? How did you make your decision? What are some interesting features of your editor? What are some useful keyboard shortcuts for your editor? How do you customize your editor?
 
->> REPLACE THIS TEXT WITH YOUR RESPONSE
+>> I will use SUBLIME because I have used it before on other projects. It has a mini-map that I think is especially cool to see where you are in a file of text. I do not know too many useful shortcuts right now besides C-TAB and C-F, but I am sure I will learn more as I use the editor more often! I customized it by making default text size to 14 because I am going blind. Oh, and I just learned that it has a built-in python interpreter!
 
  
