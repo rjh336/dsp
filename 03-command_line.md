@@ -19,22 +19,37 @@ Here's a list of items with which you should be familiar:
 
 Make a cheat sheet for yourself: a list of at least **ten** commands and what they do.  (Use the 8 items above and add a couple of your own.)  
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+* `pwd` - show current working directory path
+* `mkdir` - creating a directory
+* `rm -r` - deleting a directory
+* `touch [filename]` - creating a file using `touch` command
+* `rm [filename]` - deleting a file
+* `mv [Path to filename] [Path to new filename]` - renaming a file
+* `ls -la` - listing hidden files
+* `cp [Path to file] [New Path]` - copying a file from one directory to another
+* `grep [regex] *` - find all instances of a given regex in current directory
+* `env` - list all environment variables
 
 ---
 
 ### Q2.  List Files in Unix   
 
 What do the following commands do:  
-`ls`  
-`ls -a`  
-`ls -l`  
-`ls -lh`  
-`ls -lah`  
+`ls` 
+`ls -a` 
+`ls -l` 
+`ls -lh` 
+`ls -lah` 
 `ls -t`  
-`ls -Glp`  
+`ls -Glp` 
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`ls` - display contents of current directory  
+`ls -a` - display all (including hidden) contents of current directory  
+`ls -l` - display contents of current directory in long list format  
+`ls -lh` - display file/folder sizes of current directory in human readable format  
+`ls -lah` - display all contents of current directory in human readable long list format  
+`ls -t`  - sort contents by last time modified  
+`ls -Glp` - display long list without group names and by appending '/' to directory names  
 
 ---
 
@@ -42,7 +57,11 @@ What do the following commands do:
 
 Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) and pick 5 of your favorites:
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+* `ls -Rl` - display list of subdirectories contents recursively
+* `ls -lX` - list sorted by name alphabetically
+* `ls -lS` - list sorted by file size
+* `ls -lah` - long list of all files with human readable sizes
+* `ls -lt` - list sorted by last time modified
 
 ---
 
@@ -50,7 +69,10 @@ Explore these other [ls options](http://www.techonthenet.com/unix/basic/ls.php) 
 
 What does `xargs` do? Give an example of how to use it.
 
-> > REPLACE THIS TEXT WITH YOUR RESPONSE
+`xargs` will start its own command line and can be used to run commands in parallel by piping input from one command 
+to xargs. In the following example I will use xargs to open all files in the current path that have the **.py** extension:  
+
+`find . -name "*.py" | xargs gedit`
 
  
 
