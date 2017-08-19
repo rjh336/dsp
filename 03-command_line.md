@@ -29,6 +29,9 @@ Make a cheat sheet for yourself: a list of at least **ten** commands and what th
 * `cp [Path to file] [New Path]` - copying a file from one directory to another
 * `grep [regex] *` - find all instances of a given regex in current directory
 * `env` - list all environment variables
+* `cat [filename]` - display contents of file in current directory to STDOUT
+* `less [filename]` - view contents of file by page
+* `sudo su` - switch user to root
 
 ---
 
