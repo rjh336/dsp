@@ -83,7 +83,7 @@ What terminal editor will be your preferred choice of use? How did you make your
 
 >> Emacs - although it doesn't open in my terminal window. I chose it because it is less scary looking than vim, more replicates the common shortcuts of a graphical editor, and I do not want to be limited by nano. Also, I am not down with this whole escaping business. Hey, I edited this markdown in emacs!
 
---
+---
 
 ### Q3. Graphical Editor
 
