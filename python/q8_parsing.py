@@ -15,7 +15,7 @@ for line in f:
 
 	# difference between 6th and 7th elements is the goal spread metric we want
 	# we want to take the absolute value of this difference to figure out the 
-	# lowest spread, rather than the lowest 
+	# lowest spread, rather than the lowest difference
 	goal_spread = abs(int(list_line[5]) - int(list_line[6]))
 	data[goal_spread] = team_name
 
