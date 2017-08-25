@@ -14,6 +14,7 @@ def read_csv(file):
 	return (headers, data)
 
 
+# Q1
 def get_degree_freq(data, headers):
 	field_num = headers.index("degree")
 	freqs = {}
@@ -35,6 +36,7 @@ def get_degree_freq(data, headers):
 	return freqs
 
 
+# Q2
 def get_title_freq(data, headers):
 	field_num = headers.index("title")
 	freqs = {}
@@ -49,16 +51,19 @@ def get_title_freq(data, headers):
 	return freqs
 
 
+# Q3
 def get_email_list(data, headers):
 	field_num = headers.index("email")
 	email_list = [x[field_num] for x in data]
 	return email_list
 
 
+# Q4
 def get_unique_domains(list):
 	return set([ re.sub('.*@', '', x) for x in list if '@' in x ])
 
 
+# Used to print markdown tables for Q1 and Q2
 def print_markdown(col):
 	total = 0
 	print('| Title | Frequency |')
@@ -72,6 +77,7 @@ def print_markdown(col):
 
 
 #########################################
+
 f = "./faculty.csv"
 data_and_headers = read_csv(f)
 headers = data_and_headers[0]
@@ -82,9 +88,9 @@ titles = get_title_freq(data, headers)
 emails = get_email_list(data, headers)
 unique_domains = get_unique_domains(emails)
 
-print_markdown(degrees)
-print_markdown(titles)
-print(emails, '\n\n')
-print(unique_domains)
+print_markdown(degrees) #Q1 answer 
+print_markdown(titles)  #Q2 answer
+print(emails, '\n\n')   #Q3 answer
+print(unique_domains)   #Q4 answer
 
 
