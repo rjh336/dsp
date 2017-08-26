@@ -3,11 +3,11 @@ import re
 def read_csv(file):
 	f = open(file, "r")
 	first_line = f.readline()
-	first_line = first_line[:len(first_line)-1]
+	first_line = re.sub('\n', '', first_line)
 	headers = re.split(',\s?', first_line)
 	data = []
 	for line in f:
-		text_line = line[:len(line)-1]
+		text_line = re.sub('\n', '', line)
 		row = re.split(',\s?', text_line)
 		data.append(row)
 	f.close()
@@ -88,9 +88,7 @@ titles = get_title_freq(data, headers)
 emails = get_email_list(data, headers)
 unique_domains = get_unique_domains(emails)
 
-print_markdown(degrees) #Q1 answer 
-print_markdown(titles)  #Q2 answer
-print(emails, '\n\n')   #Q3 answer
-print(unique_domains)   #Q4 answer
-
-
+#print_markdown(degrees) #Q1 answer 
+#print_markdown(titles)  #Q2 answer
+#print(emails)   #Q3 answer
+#print(unique_domains)   #Q4 answer

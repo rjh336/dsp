@@ -39,7 +39,7 @@ set(['a', 1, 2, 'b', 1.5])
 
 Describe Python's `lambda`. What is it, and what is it used for? Give at least one example, including an example of using a `lambda` in the `key` argument to `sorted`.
 
->> `lambda` is a keyword that allows creation of a nameless function without use of the traditional definition of a function. Lambda functions can have any number of arguments, but only one expression. It can be used to perform operations that will likely not be used again later in our code (e.g. column transformations in a dataframe). For example:  
+>> `lambda` is a keyword that allows creation of a nameless function without use of the traditional definition of a function. Lambda functions can have any number of arguments, but only one expression. It can be used to perform operations that will likely not be used again later in a body code (e.g. use as a key function argument to the `sorted()` function). For example:  
 
 ```python
 people = [('John', 44), ('Mary', 29), ('Steven', 12), ('Raj', 31)] # if x is each tuple, x[0] is name and x[1] is age
