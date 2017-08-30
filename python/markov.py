@@ -12,4 +12,51 @@
 
 # There are design choices to make; feel free to experiment and shape the program as you see fit. Jeff Atwood's [Markov and You](http://blog.codinghorror.com/markov-and-you/) is a fun place to get started learning about what you're trying to make.
 
-> REPLACE THIS TEXT WITH YOUR PROGRAM
+import random
+import sys
+
+def read_file(file):
+	f = open(file, 'r')
+	text = f.read().strip('*** ')
+	return text
+
+
+def create_word_probs(corpus):
+	word_probs = {}
+	word_list = corpus.split()
+
+	i = 0
+	while i < len(word_list) - 1:
+		if word_list[i] not in word_probs:
+			word_probs[word_list[i]] = [word_list[i+1]]
+			i+=1
+		else:
+			word_probs[word_list[i]].append(word_list[i+1])
+			i+=1
+	return word_probs
+
+def generator(n, word_dict):
+	start_list = [ x for x in word_dict.keys() if x[0].isupper() ]
+	start = random.choice(start_list)
+	i = 0
+	output = start
+
+	while i < n:
+		next_word = random.choice(word_dict[start])
+		output += next_word + " "
+		start = next_word
+		i+=1
+
+	return output
+
+
+if __name__ == '__main__':
+
+	# e.g. markov.py tom_sawyer.txt 20
+
+	wordgram = int(sys.argv[2])
+	fname = sys.argv[1]
+	
+	corpus = read_file(fname)
+	probs = create_word_probs(corpus)
+	print(generator(wordgram, probs))
